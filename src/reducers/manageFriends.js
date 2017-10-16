@@ -1,11 +1,10 @@
-export function manageFriends(state, action){   
+export function manageFriends(state, action){
   switch (action.type) {
-    case 'INCREASE_COUNT':
+    case 'ADD_FRIEND':
       return {count: state.count + 1}
-    case 'DECREASE_COUNT':
+    case 'REMOVE_FRIEND':
       return {count: state.count - 1}
     default:
       return state;
   }
 }
- 
