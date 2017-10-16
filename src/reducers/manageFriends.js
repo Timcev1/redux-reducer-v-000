@@ -3,7 +3,7 @@ export function manageFriends(state, action){
     case 'ADD_FRIEND':
       return {friends: state.friends + 1}
     case 'REMOVE_FRIEND':
-      return {friends: state.friends - 1}
+      return {friends: state.friends.filter( friend => friend.id !== action.id )}
     default:
       return state;
   }
