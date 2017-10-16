@@ -1,17 +1,11 @@
-export function manageFriends(state = {
-  friends: [],
-}, action){
+export function manageFriends(state, action){   
   switch (action.type) {
-    case "ADD_FRIEND":
-      return Object.assign({}, state {
-        friends: [
-          ...state.friends,
-          action.friend
-        ]
-      });
-      
-      break;
+    case 'INCREASE_COUNT':
+      return {count: state.count + 1}
+    case 'DECREASE_COUNT':
+      return {count: state.count - 1}
     default:
-      
+      return state;
   }
 }
+ 
